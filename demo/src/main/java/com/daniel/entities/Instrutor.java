@@ -1,4 +1,5 @@
-package com.example.daniel;
+package com.daniel.entities; 
+
 
 import java.util.ArrayList;
 import java.util.List;

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.daniel.entities.Instrutor;
 
 
-
 @Repository
 public interface InstrutorRepository
         extends JpaRepository<Instrutor, Long> {

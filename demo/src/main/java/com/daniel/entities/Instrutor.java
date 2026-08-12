@@ -28,6 +28,7 @@ public class Instrutor {
   private String biografia;
 
   @OneToMany(mappedBy = "instrutor")
+  @com.fasterxml.jackson.annotation.JsonIgnoreProperties("instrutor")
   private List<Curso> cursos = new ArrayList<>();
 
   public Instrutor() {

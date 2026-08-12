@@ -4,6 +4,8 @@ package com.daniel.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -44,9 +46,11 @@ public class Curso {
 
   @ManyToOne
   @JoinColumn(name = "instrutor_id", nullable = false)
+  @JsonIgnoreProperties("cursos")
   private Instrutor instrutor;
 
   @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true)
+  @com.fasterxml.jackson.annotation.JsonIgnoreProperties("curso")
   private List<Aula> aulas = new ArrayList<>();
 
   public Curso() {

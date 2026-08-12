@@ -34,6 +34,7 @@ public class Aula {
 
     @ManyToOne
     @JoinColumn(name = "curso_id", nullable = false)
+    @com.fasterxml.jackson.annotation.JsonIgnoreProperties("aulas")
     private Curso curso;
 
 
